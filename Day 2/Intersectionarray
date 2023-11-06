@@ -1,0 +1,47 @@
+#include<stdio.h>
+int main(){
+int i,j,k,m,n,index,flag;
+printf("Enter the size of array");
+scanf("%d",&n);
+int a[n];
+for(int i=0;i<n;i++){
+     scanf("%d",&a[i]);
+}
+     printf("Enter 2nd array");
+     scanf("%d",&m);
+     int b[m];
+     for(i=0;i<m;i++){
+     scanf("%d",&b[i]);}
+    int res[100];
+     index=0;
+     for(i=0;i<n;i++){
+     for(j=0;j<m;j++){
+          
+          
+          flag=0;
+          for(k=0;k<index;k++){
+             if(a[i]==res[k]){
+                  flag=1;
+                  break;}}
+          if(flag==0){        
+              
+              res[index]=a[i];
+              index++;}
+     }
+     
+   }     
+     
+    
+for(i=0;i<index;i++){
+         printf("%d",res[i]);
+          
+          
+ }
+          
+
+
+return 0;
+
+
+
+}
